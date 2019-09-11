@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FEDBD0</color>
+    <color name="colorPrimaryDark">#0D47A1</color>
+    <color name="colorAccent">#3498DB</color>
+
+    <color name="textColor">#442C2E</color>
+
+    <color name="color1">#fbed96</color>
+    <color name="color3">#abecd6</color>
+
+    <color name="txt_color_black">#353535</color>
+    <color name="buttonColor">#dbedb0</color>
+
+    <color name="tvbtnEnableColor">#4CAF50</color>
+    <color name="tvbtnDisableColor">#FF5722</color>
+
+    <color name="textColorBrown">#442C2E</color>
+    <color name="pmColorBrown">#FEDBD0</color>
+    <color name="colorExp">#442C2E</color>FEDBD0
+    <color name="background">#DDDDDD</color>
+    <color name="cp_grey">#9D9D9D</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="html_txt_color">#797979</color>
+    <color name="bg_grey">#DDDDDD</color>
+    <color name="grey_bg">#F4F5F7</color>
+    <color name="seprator">#EAEAEA</color>
+    <color name="textTitlecolor">#5D5D67</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+
+    <color name="black_material">#263238</color>
+    <color name="green">#259004</color>
+</resources>

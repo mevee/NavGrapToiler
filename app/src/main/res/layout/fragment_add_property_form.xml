@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:id="@+id/header_myvehile"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_size"
+        android:background="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/back_btn_width"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="?selectableItemBackground"
+            android:padding="6dp"
+            android:src="@drawable/ic_arrow_back_white_24dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_toLeftOf="@+id/tv_add_new_vehical"
+            android:layout_toRightOf="@+id/iv_back"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/TextBold"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/iv_back_myvehicles"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="left|center"
+                android:text="Toiler"
+                android:textColor="@color/white"
+                android:textSize="@dimen/h1" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/header_size"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium"
+                android:layout_marginStart="@dimen/dp8"
+                android:layout_marginTop="@dimen/dp8"
+                android:text="Listing Type : "
+                android:padding="6dp"
+                android:singleLine="true"
+                android:textStyle="normal"
+                android:textSize="@dimen/h2" />
+            <RadioGroup
+                android:id="@+id/rg_listing_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp16"
+                android:layout_marginEnd="@dimen/dp16"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/rb_rent"
+                    android:layout_width="@dimen/zero"
+                    android:layout_height="wrap_content"
+                    android:text="Rent"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    />
+                <RadioButton
+                    android:id="@+id/rb_buy"
+                    android:layout_width="@dimen/zero"
+                    android:layout_height="wrap_content"
+                    android:text="Buy"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    />
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium"
+                android:layout_marginStart="@dimen/dp16"
+                android:layout_marginTop="@dimen/dp8"
+                android:text="Property type : "
+                android:padding="6dp"
+                android:singleLine="true"
+                android:textStyle="normal"
+                android:textSize="@dimen/h2" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp48"
+                android:layout_marginStart="@dimen/dp16"
+                android:layout_marginEnd="@dimen/dp16"
+                android:background="@drawable/stroke_spinner">
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/sp_property_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium"
+                android:layout_marginStart="@dimen/dp16"
+                android:layout_marginTop="@dimen/dp8"
+                android:text="No of Rooms : "
+                android:padding="6dp"
+                android:singleLine="true"
+                android:textStyle="normal"
+                android:textSize="@dimen/h2" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp48"
+                android:layout_marginStart="@dimen/dp16"
+                android:layout_marginEnd="@dimen/dp16"
+                android:background="@drawable/stroke_spinner">
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/sp_no_of_rooms"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </RelativeLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp48"
+                android:layout_marginLeft="@dimen/dp16"
+                android:layout_marginTop="@dimen/dp16"
+                android:layout_marginRight="@dimen/dp16"
+                android:theme="@style/TextLabel"
+                >
+
+                <EditText
+                    android:id="@+id/et_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:hint="Address"
+                    android:padding="6dp"
+                    android:textSize="@dimen/h2" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp48"
+                android:layout_marginLeft="@dimen/dp16"
+                android:layout_marginTop="@dimen/dp16"
+                android:layout_marginRight="@dimen/dp16"
+                android:theme="@style/TextLabel"
+                >
+
+                <EditText
+                    android:id="@+id/et_state"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:hint="State"
+                    android:padding="6dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/h2" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp48"
+                android:layout_marginLeft="@dimen/dp16"
+                android:layout_marginTop="@dimen/dp16"
+                android:layout_marginRight="@dimen/dp16"
+                android:theme="@style/TextLabel"
+                >
+
+                <EditText
+                    android:id="@+id/et_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:hint="City"
+                    android:padding="6dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/h2" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp48"
+                android:layout_marginLeft="@dimen/dp16"
+                android:layout_marginTop="@dimen/dp16"
+                android:layout_marginRight="@dimen/dp16"
+                android:theme="@style/TextLabel"
+                >
+
+                <EditText
+                    android:id="@+id/et_zipcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:hint="Zip Code"
+                    android:padding="6dp"
+                    android:maxLength="6"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textSize="@dimen/h2" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/dp48"
+                android:layout_marginLeft="@dimen/dp16"
+                android:layout_marginTop="@dimen/dp16"
+                android:layout_marginRight="@dimen/dp16"
+                android:theme="@style/TextLabel"
+                >
+
+                <EditText
+                    android:id="@+id/et_sp_note"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:hint="*Note(optional)"
+                    android:padding="6dp"
+                    android:textSize="@dimen/h2" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp40"
+                android:layout_margin="@dimen/dp16"
+                android:background="@drawable/gradient_green_d0">
+
+                <TextView
+                    android:id="@+id/signUp_tV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?selectableItemBackground"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center"
+                    android:text="next"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+</FrameLayout>

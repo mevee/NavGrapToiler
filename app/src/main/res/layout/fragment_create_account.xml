@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.fragments.CreateAccountFragment">
+
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_size"
+        android:background="@color/colorAccent">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/back_btn_width"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="?selectableItemBackground"
+            android:padding="@dimen/pd6"
+            android:tint="@color/white"
+            android:src="@drawable/ic_arrow_back_white_24dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_toRightOf="@+id/iv_back"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/iv_back_myvehicles"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="left|center"
+                android:text="@string/create_account"
+                android:textColor="@color/white"
+                android:textSize="@dimen/h1" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <ScrollView
+        android:layout_marginTop="@dimen/header_size"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="32dp"
+                android:background="@color/cp_grey"
+                app:cardCornerRadius="40dp"
+                app:cardElevation="4dp">
+
+                <ImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/profile_image_plot1"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="1dp"
+                    android:src="@drawable/man"
+                    android:transitionName="profile_card" />
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:theme="@style/TextLabel">
+
+                <EditText
+                    android:id="@+id/fNameSignUp_editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:hint="@string/first_name"
+                    android:singleLine="true"
+                    android:textSize="@dimen/h1_5" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:theme="@style/TextLabel">
+
+                <EditText
+                    android:id="@+id/email_signUp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:hint="@string/email_address"
+                    android:inputType="textEmailAddress"
+                    android:padding="6dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/h1_5" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:theme="@style/TextLabel">
+
+                <EditText
+                    android:id="@+id/phn_signUp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:hint="@string/mobile_no"
+                    android:inputType="number"
+                    android:padding="6dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/h1_5" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:theme="@style/TextLabel"
+                app:passwordToggleEnabled="true">
+
+                <EditText
+                    android:id="@+id/pass_signUp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:padding="6dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/h1_5" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:theme="@style/TextLabel">
+
+                <EditText
+                    android:id="@+id/cnfrmPass_signUp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:hint="@string/confirm_password"
+                    android:inputType="textPassword"
+                    android:padding="6dp"
+
+                    android:singleLine="true"
+                    android:textSize="@dimen/h1_5" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="16dp"
+                android:background="@drawable/gradient_green_d0">
+
+                <TextView
+                    android:id="@+id/signUp_tV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?selectableItemBackground"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center"
+                    android:text="@string/submit"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</FrameLayout>

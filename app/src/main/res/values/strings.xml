@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">NavGrapToiler</string>
+
+    <string name="google_maps_api_key">AIzaSyBXHLKmEQGIbewfIfYzhEpO15FxpdIvNFU</string>
+
+    <string name="password_change">Password Change</string>
+    <string name="old_pass">Old Password</string>
+    <string name="new_password">New Password</string>
+    <string name="enter_your_mobile">Enter your mobile</string>
+    <string name="change_password">Change Password</string>
+    <string name="change_password_1_line">Change \nPassword</string>
+    <string name="old_pass_rqrd">Old password is required</string>
+    <string name="n_pass_rqrd">New password is required</string>
+    <string name="min_6char_pass_rqrd">password must be minimum of 6 characters</string>
+    <string name="pass_do_match_rqrd">password do not matched</string>
+
+    <string name="password_recovery">Password Recovery</string>
+    <string name="submit">Submit</string>
+    <string name="forget_password">Forget Password</string>
+
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="confirm_new_password">Confirm New Password</string>
+
+
+    <string name="Continue">Continue</string>
+    <string name="profile">My Profile</string>
+    <string name="edit">Edit</string>
+
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="create_account">Create Account</string>
+    <string name="email_address">Email Address</string>
+    <string name="mobile_no">Mobile No.*</string>
+    <string name="bungalow">Bungalow</string>
+    <string name="office">Office</string>
+    <string name="flat">Flat</string>
+    <string name="shops">Shops</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="change_location">Change Location</string>
+
+
+</resources>

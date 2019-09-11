@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.fragments.ProductListFragment">
+
+    <RelativeLayout
+        android:id="@+id/rlHeader"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/colorAccent">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/back_btn_width"
+            android:padding="@dimen/pd6"
+            android:layout_height="match_parent"
+            android:tint="@color/white"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_arrow_back_white_24dp" />
+
+        <TextView
+            android:id="@+id/tv_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/back_btn_width"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="All Listings"
+            android:textColor="@color/white"
+            android:textSize="@dimen/h1" />
+        <ImageView
+            android:id="@+id/iv_filter"
+            android:layout_width="@dimen/dp48"
+            android:layout_height="match_parent"
+            android:src="@drawable/filters_ic"
+            android:padding="@dimen/pd8"
+            android:background="?selectableItemBackgroundBorderless"
+            android:layout_alignParentRight="true"
+            android:tint="@color/white"/>
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/et_serch_keyword"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp48"
+        android:layout_below="@+id/rlHeader"
+        android:layout_margin="@dimen/dp8"
+        android:background="@drawable/gradient_grey"
+        android:fontFamily="@font/montserrat_medium"
+        android:gravity="center_vertical"
+        android:hint="Search here"
+        android:imeOptions="actionSearch"
+        android:padding="@dimen/dp4"
+        android:textSize="@dimen/h3"
+        android:singleLine="true" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/et_serch_keyword"
+        android:layout_marginTop="@dimen/dp4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_listing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+            <TextView
+                android:id="@+id/tv_btn_list_property"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp40"
+                android:layout_margin="@dimen/dp16"
+                android:text="List your property"
+                android:gravity="center"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/white"
+                android:foreground="?selectableItemBackground"
+                android:background="@drawable/gradient_horizontal"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp48" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

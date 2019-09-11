@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashScreenFragment">
+
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.vee.navgraptoiler.view.fragments.SplashScreenFragment"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreenFragment_to_signInFragment"
+            app:destination="@id/signInFragment"
+            app:enterAnim="@anim/side_in_right"
+            app:exitAnim="@anim/side_out_left"
+            app:popEnterAnim="@anim/side_in_left"
+            app:popExitAnim="@anim/side_out_right"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/splashScreenFragment"
+            />
+        <action
+            android:id="@+id/action_splashScreenFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/side_in_right"
+            app:exitAnim="@anim/side_out_left"
+            app:popEnterAnim="@anim/side_in_left"
+            app:popExitAnim="@anim/side_out_right"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/splashScreenFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.vee.navgraptoiler.view.fragments.SignInFragment"
+        android:label="fragment_signin"
+        tools:layout="@layout/fragment_signin">
+        <action
+            android:id="@+id/action_signInFragment_to_forgetPasswordFragment"
+            app:destination="@id/forgetPasswordFragment"
+            app:enterAnim="@anim/side_in_right"
+            app:exitAnim="@anim/side_out_left"
+            app:popEnterAnim="@anim/side_in_left"
+            app:popExitAnim="@anim/side_out_right"
+            />
+        <action
+            android:id="@+id/action_signInFragment_to_createAccountFragment"
+            app:destination="@id/createAccountFragment"
+            app:enterAnim="@anim/side_in_right"
+            app:exitAnim="@anim/side_out_left"
+            app:popEnterAnim="@anim/side_in_left"
+            app:popExitAnim="@anim/side_out_right" />
+        <action
+            android:id="@+id/action_signInFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/side_in_right"
+            app:exitAnim="@anim/side_out_left"
+            app:popEnterAnim="@anim/side_in_left"
+            app:popExitAnim="@anim/side_out_right"
+            app:popUpTo="@id/signInFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/createAccountFragment"
+        android:name="com.vee.navgraptoiler.view.fragments.CreateAccountFragment"
+        android:label="fragment_create_account"
+        tools:layout="@layout/fragment_create_account" />
+    <fragment
+        android:id="@+id/forgetPasswordFragment"
+        android:name="com.vee.navgraptoiler.view.fragments.ForgetPasswordFragment"
+        android:label="fragment_forget_password"
+        tools:layout="@layout/fragment_forget_password" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.vee.navgraptoiler.view.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_productListFragment"
+            app:destination="@id/productListFragment"
+
+            app:enterAnim="@anim/side_in_right"
+            app:exitAnim="@anim/side_out_left"
+            app:popEnterAnim="@anim/side_in_left"
+            app:popExitAnim="@anim/side_out_right" />
+        <action
+            android:id="@+id/action_homeFragment_to_editProfileFragment2"
+            app:destination="@id/editProfileFragment2"
+            app:enterAnim="@anim/side_in_right"
+            app:exitAnim="@anim/side_out_left"
+            app:popEnterAnim="@anim/side_in_left"
+            app:popExitAnim="@anim/side_out_right" />
+        <action
+            android:id="@+id/action_homeFragment_to_myListingFragment2"
+            app:destination="@id/myListingFragment2"
+            app:enterAnim="@anim/side_in_right"
+            app:exitAnim="@anim/side_out_left"
+            app:popEnterAnim="@anim/side_in_left"
+            app:popExitAnim="@anim/side_out_right" />
+        <action
+            android:id="@+id/action_homeFragment_to_changPasswordeFragment2"
+            app:destination="@id/changPasswordeFragment2"
+            app:enterAnim="@anim/side_in_right"
+            app:exitAnim="@anim/side_out_left"
+            app:popEnterAnim="@anim/side_in_left"
+            app:popExitAnim="@anim/side_out_right" />
+        <action
+            android:id="@+id/action_homeFragment_to_addPropertyFormFragment"
+            app:destination="@id/addPropertyFormFragment"
+            app:enterAnim="@anim/side_in_right"
+            app:exitAnim="@anim/side_out_left"
+            app:popEnterAnim="@anim/side_in_left"
+            app:popExitAnim="@anim/side_out_right" />
+        <action
+            android:id="@+id/action_homeFragment_to_signInFragment"
+            app:destination="@id/signInFragment"
+            app:exitAnim="@anim/side_out_left"
+            app:popEnterAnim="@anim/side_in_left"
+            app:popExitAnim="@anim/side_out_right"
+            app:popUpTo="@+id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.vee.navgraptoiler.view.fragments.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/productDetailFragment"
+        android:name="com.vee.navgraptoiler.view.fragments.ProductDetailFragment"
+        android:label="fragment_product_detail"
+        tools:layout="@layout/fragment_product_detail" />
+    <fragment
+        android:id="@+id/propertyOptionsFragment"
+        android:name="com.vee.navgraptoiler.view.fragments.PropertyOptionsFragment"
+        android:label="fragment_property_options"
+        tools:layout="@layout/fragment_property_options" />
+    <fragment
+        android:id="@+id/productListFragment"
+        android:name="com.vee.navgraptoiler.view.fragments.ProductListFragment"
+        android:label="fragment_product_list"
+        tools:layout="@layout/fragment_product_list">
+        <action
+            android:id="@+id/action_productListFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment"
+            app:enterAnim="@anim/side_in_right"
+            app:exitAnim="@anim/side_out_left"
+            app:popEnterAnim="@anim/side_in_left"
+            app:popExitAnim="@anim/side_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment2"
+        android:name="com.vee.navgraptoiler.view.fragments.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" />
+    <fragment
+        android:id="@+id/changPasswordeFragment2"
+        android:name="com.vee.navgraptoiler.view.fragments.ChangPasswordeFragment"
+        android:label="fragment_chang_passworde"
+        tools:layout="@layout/fragment_chang_passworde" />
+    <fragment
+        android:id="@+id/myListingFragment2"
+        android:name="com.vee.navgraptoiler.view.fragments.MyListingFragment"
+        android:label="fragment_my_listing"
+        tools:layout="@layout/fragment_my_listing" >
+        <action
+            android:id="@+id/action_myListingFragment2_to_addPropertyFormFragment"
+            app:destination="@id/addPropertyFormFragment"
+            app:enterAnim="@anim/side_in_right"
+            app:exitAnim="@anim/side_out_left"
+            app:popEnterAnim="@anim/side_in_left"
+            app:popExitAnim="@anim/side_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/addPropertyFormFragment"
+        android:name="com.vee.navgraptoiler.view.fragments.property_fragments.AddPropertyFormFragment"
+        android:label="fragment_add_property_form"
+        tools:layout="@layout/fragment_add_property_form">
+        <action
+            android:id="@+id/action_addPropertyFormFragment_to_addImagesFragment"
+            app:destination="@id/addImagesFragment"
+
+            app:enterAnim="@anim/side_in_right"
+            app:exitAnim="@anim/side_out_left"
+            app:popEnterAnim="@anim/side_in_left"
+            app:popExitAnim="@anim/side_out_right"
+            />
+        <argument
+            android:name="title"
+            android:defaultValue="Register your property"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/addImagesFragment"
+        android:name="com.vee.navgraptoiler.view.fragments.property_fragments.AddImagesFragment"
+        android:label="fragment_add_images"
+        tools:layout="@layout/fragment_add_images" />
+
+</navigation>
